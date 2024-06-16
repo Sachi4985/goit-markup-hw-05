@@ -602,6 +602,7 @@ img {
 .modal-icon:hover,
 .modal-icon:focus {
   fill: #ffffff;
+  color: #ffffff;
 }
 .modal-window-desc {
   font-weight: 500;
