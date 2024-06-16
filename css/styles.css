@@ -11,7 +11,10 @@ body {
 img {
   display: block;
 }
-
+:root {
+  --background-color-focus: #404bbf;
+  --fill-color-focus: #f4f4fd;
+}
 .container {
   width: 1158px;
   margin: 0 auto;
@@ -724,4 +727,13 @@ img {
 }
 .user-privacy .visually-hidden {
   display: none;
+}
+.modal-window-label-container input:focus + svg {
+  fill: var(--fill-color-focus);
+}
+
+.modal-window-label-container input:focus + svg + span {
+  background-color: var(--background-color-focus);
+  border: none;
+  fill: var(--fill-color-focus);
 }
