@@ -8,6 +8,15 @@ body {
   color: #434455;
   background-color: #ffffff;
 }
+:root {
+  --background-color-focused: #404bbf;
+  --icon-color-focused: #f4f4fd;
+}
+.modal-window-input:focus + svg {
+  background-color: var(--background-color-focused);
+  border: none;
+  fill: var(--icon-color-focused);
+}
 img {
   display: block;
 }
