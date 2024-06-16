@@ -599,8 +599,9 @@ img {
 .modal-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-icon:hover,
-.modal-icon:focus {
+.modal-button:hover .modal-icon,
+.modal-button:focus .modal-icon {
+  fill: #ffffff;
   fill: #ffffff;
 }
 .modal-window-desc {
@@ -638,6 +639,9 @@ img {
 }
 .modal-window-input:focus-within {
   border-color: #4d5ae5;
+}
+.modal-window-label-container input:focus + svg {
+  fill: #4d5ae5;
 }
 .modal-window-icons {
   position: absolute;
