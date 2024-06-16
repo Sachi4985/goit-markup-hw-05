@@ -683,6 +683,15 @@ img {
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
+:root {
+  --background-color-focused: #404bbf;
+  --icon-color-focused: #f4f4fd;
+}
+input:focus + span {
+  background-color: var(--background-color-focused);
+  border: none;
+  fill: var(--icon-color-focused);
+}
 .user-privacy-span {
   width: 16px;
   height: 16px;
@@ -723,4 +732,7 @@ img {
 }
 .user-privacy .visually-hidden {
   display: none;
+}
+.modal-window-textarea::placeholder {
+  color: #75757580;
 }
