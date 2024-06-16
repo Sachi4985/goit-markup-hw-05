@@ -545,7 +545,9 @@ img {
 .footer-frame {
   margin-left: 16px;
 }
+
 .modal-container {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -585,6 +587,9 @@ img {
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-container.is-open {
+  display: flex;
 }
 .modal-button:hover,
 .modal-button:focus {
