@@ -741,7 +741,7 @@ input:focus + span {
 input:checked + .user-privacy-span {
   fill: #f4f4fd;
 }
-.checkbox-input .user-privacy {
+.checkbox-input .visually-hidden {
   display: none;
 }
 .modal-window-textarea::placeholder {
