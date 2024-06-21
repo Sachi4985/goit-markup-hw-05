@@ -8,10 +8,18 @@ body {
   color: #434455;
   background-color: #ffffff;
 }
+:root {
+  --background-color-focused: #404bbf;
+  --icon-color-focused: #f4f4fd;
+}
+.modal-window-input:focus + svg {
+  background-color: var(--background-color-focused);
+  border: none;
+  fill: var(--icon-color-focused);
+}
 img {
   display: block;
 }
-
 .container {
   width: 1158px;
   margin: 0 auto;
@@ -599,8 +607,9 @@ img {
 .modal-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-icon:hover,
-.modal-icon:focus {
+.modal-button:hover .modal-icon,
+.modal-button:focus .modal-icon {
+  fill: #ffffff;
   fill: #ffffff;
 }
 .modal-window-desc {
@@ -636,8 +645,11 @@ img {
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-window-input:focus {
+.modal-window-input:focus-within {
   border-color: #4d5ae5;
+}
+.modal-window-label-container input:focus + svg {
+  fill: #4d5ae5;
 }
 .modal-window-icons {
   position: absolute;
@@ -680,6 +692,15 @@ img {
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
+:root {
+  --background-color-focused: #404bbf;
+  --icon-color-focused: #f4f4fd;
+}
+input:focus + span {
+  background-color: var(--background-color-focused);
+  border: none;
+  fill: var(--icon-color-focused);
+}
 .user-privacy-span {
   width: 16px;
   height: 16px;
@@ -694,7 +715,7 @@ img {
   fill: transparent;
   margin-right: 8px;
 }
-.modal-window-input + .user-privacy-span {
+.visually-hidden:checked + .user-privacy-span {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
@@ -717,4 +738,10 @@ img {
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin: auto;
+}
+.user-privacy .visually-hidden {
+  display: none;
+}
+.modal-window-textarea::placeholder {
+  color: #75757580;
 }
